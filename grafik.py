@@ -1,24 +1,23 @@
 import streamlit as st
-import seaborn as sns
 import matplotlib.pyplot as plt
 
-st.title("Demo Seaborn + Streamlit")
-st.write("Aplikasi ini menampilkan contoh grafik scatterplot menggunakan dataset bawaan Seaborn (`tips`).")
+st.title("Demo Matplotlib + Streamlit")
+st.write("Grafik ini dibuat dengan Matplotlib tanpa Seaborn.")
 
-# Ambil dataset bawaan seaborn
-df = sns.load_dataset("tips")
+# Contoh data
+x = [1, 2, 3, 4, 5]
+y = [2, 5, 3, 6, 8]
 
-# Tampilkan dataframe
-st.subheader("Dataset: Tips")
-st.dataframe(df.head(10))
-
-# Buat grafik seaborn
+# Buat grafik matplotlib
 fig, ax = plt.subplots()
-sns.scatterplot(data=df, x="total_bill", y="tip", hue="sex", style="smoker", ax=ax)
+ax.plot(x, y, marker="o")
+ax.set_title("Contoh Grafik Garis")
+ax.set_xlabel("X")
+ax.set_ylabel("Y")
 
-# Tampilkan grafik di Streamlit
-st.subheader("Scatterplot: Total Bill vs Tip")
+# Tampilkan di Streamlit
 st.pyplot(fig)
 
-# Tambahkan catatan
-st.success("✅ Grafik Seaborn berhasil ditampilkan di Streamlit!")
+st.success("✅ Grafik Matplotlib berhasil ditampilkan di Streamlit!")
+
+
