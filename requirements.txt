@@ -1,0 +1,4 @@
+seaborn==0.13.2
+pandas===2.3.1
+mathplotlib==3.10.15
+streamlit==1.47.0
