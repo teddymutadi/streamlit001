@@ -2,7 +2,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 
 st.title("Demo Matplotlib + Streamlit")
-st.write("Grafik ini dibuat dengan Matplotlib tanpa Seaborn.")
+st.write("Grafik ini dibuat dengan Matplotlib")
 
 # Contoh data
 x = [1, 2, 3, 4, 5]
@@ -20,6 +20,7 @@ ax.set_ylabel("Hasil Panen")
 st.pyplot(fig)
 
 st.success("✅ Grafik Matplotlib berhasil ditampilkan di Streamlit!")
+
 
 
 
